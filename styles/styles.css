@@ -1,0 +1,170 @@
+/* reset */
+*  {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+/* document */
+body {
+	font-size: 1rem;
+	font-family: "URW Gothic L", "Helvetica", "Arial", sans-serif;
+	margin: auto;
+	counter-reset: h2;
+
+	width: 1080px; /* Testing */
+}
+
+.main-header {
+	background: #0060a0;
+	color: #fff;
+	height: 85px;
+	padding: 10px;
+	font-family: sans-serif; /* TODO */
+	font-size: 28px;
+	margin-bottom: 40px;
+}
+
+.main-header svg, .main-header h1 {
+	vertical-align: top;
+	display: inline-block;
+}
+
+h2 {
+	padding: 10px 20px;
+}
+
+nav {
+	margin: 10px;
+	padding: 0.5rem;
+	border: 1px solid #0060a0;
+	background-color: #f6f6f6;
+}
+
+nav a {
+	color: #000;
+}
+
+nav a[href] {
+	color: #0060a0;
+	text-decoration: underline;
+}
+
+nav ul {
+	list-style-type: none;
+}
+
+nav ul ul {
+	margin-left: 1rem;
+}
+
+/* TODO: :before? */
+nav a[hreflang] {
+	padding-left: 22px;
+	background-size: 20px auto;
+	background-repeat: no-repeat;
+}
+
+nav [hreflang=it] {
+	background-image: url('../media/flag-it.svg');
+}
+
+nav [hreflang=fr] {
+	background-image: url('../media/flag-fr.svg');
+}
+
+nav [hreflang=en] {
+	background-image: url('../media/flag-en.svg');
+}
+
+article {
+	padding: 0 20px;
+}
+
+article p {
+	margin: 10px 0;
+}
+
+article h2 {
+	counter-increment: h2;
+	border-bottom: 1px solid #000;
+	padding: 0;
+	margin: 10px 0;
+}
+
+article h2:before {
+	content: counter(h2) " ";
+}
+
+article .image {
+	margin: 20px 20px 20px 0;
+	float: left;
+	width: 200px;
+}
+
+article .image img {
+	width: 100%;
+}
+
+.tr-variants ul {
+	list-style-type: none;
+}
+
+.tr-variants ul li {
+	color: #0060a0;
+}
+
+.tr-variants ul ul {
+	margin-left: 1rem;
+}
+
+.tr-variants ul ul li {
+	color: #000;
+}
+
+.tr-variants ul ul li:before {
+	content: "⌖ ";
+}
+
+small {
+	display: block;
+	color: #808080;
+	word-wrap: break-word;
+}
+
+small a {
+	color: #000;
+}
+
+/* images */
+
+
+
+/* text */
+
+
+
+/* lists */
+
+
+
+/* table */
+
+
+
+/* forms */
+
+
+
+#font-size-form {
+	float: right;
+}
+#font-size-form > label, #font-size-form > input, #font-size-form > output {
+	display: inline-block;
+	vertical-align: middle;
+	padding: 0; margin: 0;
+}
+
