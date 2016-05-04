@@ -9,8 +9,8 @@
     <meta name="publisher" content="Wikipraktika"/>
     <meta name="description" content="Taschenrechner: tragbare, handliche elektronische Rechenmaschine">
 
-    <link rel="icon" href="../media/logo-wikipraktika.svg" type="image/png"/>
-    <link rel="stylesheet" type="text/css" href="../styles/styles.css">
+    <link rel="icon" href="./media/logo-wikipraktika.svg" type="image/png"/>
+    <link rel="stylesheet" type="text/css" href="./styles/styles.css">
 
 
 </head>
@@ -363,7 +363,7 @@
         </article>
         <article>
             <h2>Demonstration</h2>
-            <iframe src="calculator/index.html">Casino Mini von 1972</iframe>
+            <iframe src="./calculator/index.html">Casino Mini von 1972</iframe>
         </article>
         <article>
             <h2>Bedienung des TI-Nspire CX CAS</h2>
@@ -1135,16 +1135,87 @@
         <form>
             <fieldset>
                 <legend>Autor</legend>
-                <label>Herr
+                <label>
+                    Herr
                     <input type="radio" name="gender" value="female">
                 </label>
+                <label>
+                    Frau
+                    <input type="radio" name="gender" value="male">
+                </label>
+                <label>
+                    Name
+                    <input type="text" name="name" required>
+                </label>
+                <label>
+                    E-Mail
+                    <imput type="email" name="mail" required="">
+                </label>
+                <label>
+                    Webseite
+                    <input type="url" name="website">
+                </label>
+                <label>
+                    Geburtsdatum
+                    <input type="datetime-local" name="birthday" required>
+                </label>
+                <label>
+                    Nationalität
+                    <select name="nationality" size="1" required="">
+                        <option value="" selected="">-- Wählen --</option>
+                        <option value="CH">Switzerland</option>
+                        <option value="DE">Deutschland</option>
+                        <option value="FR">Frankreich</option>
+                        <option value="IT">Italien</option>
+                        <option value="AU">Österreich</option>
+                    </select>
+                </label>
+                <label>
+                    Profiltext
+                    <input type="text" name="profile">
+                </label>
+                <label>
+                    Profilbilder
+                    <input type="file" id="fileinput">
+                </label>
+            </fieldset>
+            <fieldset>
+                <legend>Rechtliches</legend>
+                <label>
+                    <input type="checkbox" name="verification" value="textowner">
+                    Ich bestätige, das ich der Urheber des Textes bin
+                </label>
+                <label>
+                    <input type="checkbox" name="verification" value="imageowner">
+                    Ich bestätige, das ich der Urheber aller eingereichter Bilder bin
+                </label>
+                <label>
+                    <input type="checkbox" name="verification" value="texttruth">
+                    Ich bestätige, das der Text nach bestem Treu und glauben der Wahrheit entspricht und die Bilder nicht manipuliert wurden
+                </label>
+            </fieldset>
+            <fieldset>
+                <button type="createAccount">Account anlegen</button>
+                <button type="reset">Eingaben zurücksetzen</button>
             </fieldset>
         </form>
     </section>
-
-    <!-- TODO -->
 </main>
 
-<!-- TODO -->
+<footer>
+    <address>
+        Bahnhofstrasse 42,
+        8000 Zürich
+    </address>
+    <p>
+        <a href="tel:+410445556677">+41 044 555 66 77</a>
+        <a href="mailto:info@wikipraktika.com">info@wikipraktika.com</a>
+    </p>
+    <small>
+        Alle Inhalte von Wikipraktika stehen unter der |https://i.creativecommons.org/l/by-sa/4.0/88x31.png|
+        (http://creativecommons.org/licenses/by-sa/4.0/) Creative Commons Attribution-ShareAlike 4.0 International License
+        (http://creativecommons.org/licenses/by-sa/4.0/) und dürfen nur mit Nennung des Autors weiterverwendet werden.
+    </small>
+</footer>
 </body>
 </html>
