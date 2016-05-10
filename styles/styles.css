@@ -152,8 +152,35 @@ small a {
 
 
 /* table */
+.time-gain {
+	width: 100%;
+	border-collapse: collapse;
+}
 
+.time-gain tr {
+	line-height: 40px;
+}
 
+.time-gain tr:nth-child(odd) {
+	background-color: #dbe6ef;
+}
+
+.time-gain th {
+	color: #fff;
+	background-color: #0060a0;
+	border-width: 2px 0;
+	border-color: #000;
+	border-style: solid;
+}
+
+.time-gain td {
+	text-align: center;
+}
+
+.time-gain tr td:first-child {
+	text-align: left;
+	font-weight: bold;
+}
 
 /* forms */
 
