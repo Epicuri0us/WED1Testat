@@ -80,7 +80,7 @@ nav [hreflang=en] {
 	background-image: url('../media/flag-en.svg');
 }
 
-article {
+section {
 	padding: 0 20px;
 }
 
@@ -199,7 +199,37 @@ small a {
 
 /* forms */
 
+form fieldset {
+	border-radius: 5px;
+	border: 1px solid #c0c0c0;
+	margin-bottom: 10px;
+}
 
+form legend {
+	margin-left: 10px;
+}
+
+form label {
+	display: block;
+	line-height: 30px;
+	padding: 0 10px;
+}
+
+form input[type=text],
+form input[type=email],
+form input[type=url],
+form input[type=datetime-local],
+form textarea {
+	display: block;
+	width: 100%;
+	background-color: #f5f5f5;
+	border: none;
+	border-bottom: 1px solid #000;
+}
+
+form textarea {
+	resize: vertical;
+}
 
 #font-size-form {
 	float: right;
