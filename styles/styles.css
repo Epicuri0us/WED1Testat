@@ -168,7 +168,9 @@ small a {
 
 /* images */
 
-
+.graph {
+	height: 280px;
+}
 
 /* text */
 
