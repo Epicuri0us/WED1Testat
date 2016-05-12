@@ -129,14 +129,26 @@ article .image img {
 	content: "⌖ ";
 }
 
-small {
+small, .source {
 	display: block;
 	color: #808080;
 	word-wrap: break-word;
+	margin: 20px 0;
 }
 
 small a {
 	color: #000;
+}
+
+.last-change {
+	border: 1px dashed #000;
+	padding: 2px;
+	font-style: italic;
+	margin: 20px 0;
+}
+
+.last-change .date {
+	float: right;
 }
 
 .video-wrapper {
