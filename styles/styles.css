@@ -164,7 +164,9 @@ small a {
 
 /* lists */
 
-
+ol, ul {
+	list-style-position: inside;
+}
 
 /* table */
 .time-gain {
