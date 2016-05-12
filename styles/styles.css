@@ -61,7 +61,6 @@ nav ul ul {
 	margin-left: 1rem;
 }
 
-/* TODO: :before? */
 nav a[hreflang] {
 	padding-left: 22px;
 	background-size: 20px auto;
@@ -107,6 +106,14 @@ article .image {
 
 article .image img {
 	width: 100%;
+}
+
+.calculator {
+	box-shadow: 0 0 10px #000;
+	border-radius: 10px;
+	height: 625px;
+	border: 0;
+	width: 600px;
 }
 
 .tr-variants ul {
