@@ -319,3 +319,7 @@ button:hover {
 .main-footer a, .main-footer small {
 	color: #fff;
 }
+
+.main-footer small {
+	margin: 0;
+}
