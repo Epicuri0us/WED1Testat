@@ -1,11 +1,13 @@
 /**
  * core
  */
+
+//handles the symbols for calculations
 function calculate(a,b,operation){
     switch(operation) {
         case "+": return sum(a,b);
             break;
-        case "-": return difference(a,b);
+        case "−": return difference(a,b);
             break;
         case "∗": return product(a,b);
             break;
@@ -16,19 +18,35 @@ function calculate(a,b,operation){
     }
 }
 
+//sums to numbers with NaN-detection
 function sum(a,b){
+    if(isNaN(a+b)){
+        return 'Invalid Calculation';
+    }
     return a+b;
 }
 
+//returns the difference between two numbers with NaN-detection
 function difference(a,b){
+    if(isNaN(a-b)){
+        return 'Invalid Calculation';
+    }
     return a-b;
 }
 
+//returns the product of two numbers with NaN-detection
 function product(a,b){
+    if(isNaN(a*b)){
+        return 'Invalid Calculation';
+    }
     return a*b;
 }
 
+//returns the quotient of two numbers with NaN- and Infinite-detection
 function quotient(a,b){
+    if(!isFinite(a/b) | (isNaN(a/b))){
+        return 'Invalid Calculation';
+    }
     return a/b;
 }
 
@@ -37,68 +55,62 @@ function quotient(a,b){
  */
 window.addEventListener('load', function() {
     document.getElementById('output').innerHTML = "Welcome";
-    var number1 = '';
-    var number2 = '';
+    //for calculations
+    var input = '';
+    var output = '';
     var operator = '';
     document.addEventListener('click', function(evnt) {
+        //button pressed
         if(evnt.target.attributes.getNamedItem('class') != null){
             checkWelcome();
+
+            //number pressed
             if (evnt.target.attributes.getNamedItem('class').nodeValue == 'number') {
                 console.log('pressed number');
-                number1 += evnt.target.attributes.getNamedItem('value').nodeValue;
+                input += evnt.target.attributes.getNamedItem('value').nodeValue;
             }
+
+            //operator pressed
             if (evnt.target.attributes.getNamedItem('class').nodeValue == 'operator') {
                 console.log('pressed operator');
                 var id = evnt.target.attributes.getNamedItem('id').nodeValue;
                 operator = document.getElementById(id).innerHTML;
-                if(number2 == ''){
-                    number2 = number1;
-                    number1 = '';
-                }else{
-
+                if(output == ''){
+                    output = input;
+                    input = '';
                 }
-
             }
+
+            //command pressed
             if (evnt.target.attributes.getNamedItem('class').nodeValue == 'command') {
                 console.log('pressed command');
                 var id = evnt.target.attributes.getNamedItem('id').nodeValue;
                 var command = document.getElementById(id).innerHTML;
 
+                //C-button pressed
                 if(command == "C"){
-                    number1 = '';
-                    number2 = '';
+                    input = '';
+                    output = '';
                     operator = '';
                 }else {
-                    var a, b, str, operation;
-                    a = parseFloat(number1);
-                    b = parseFloat(number2);
-                    number2 = calculate(a,b,operator);
-                    number1 = '';
+                    //equal-button pressed
+                    var a, b;
+                    a = parseFloat(output);
+                    b = parseFloat(input);
+                    input = calculate(a,b,operator);
+                    output = '';
                     operator = '';
                 }
-
-
-            }
-            if(number1 != 0){
-                document.getElementById('input').innerHTML = number1;
-            }else{
-                document.getElementById('input').innerHTML = '';
-            }
-            if(number2 != 0){
-                document.getElementById('output').innerHTML = number2+ " " + operator;
-            }else{
-                document.getElementById('output').innerHTML = '';
             }
 
-
+            //display the output
+            document.getElementById('input').innerHTML = input;
+            document.getElementById('output').innerHTML = output+ " " + operator;
         }
-
-
-
     });
-
 });
 
+//check the Welcome-HTML
 function checkWelcome(){
     if(document.getElementById('output').innerHTML == "Welcome"){
         document.getElementById('output').innerHTML = "";
