@@ -36,6 +36,8 @@ function quotient(a, b) {
 
 //handles the symbols for calculations
 function calculate(a, b, operation) {
+    a = parseFloat(a);
+    b = parseFloat(b);
     switch (operation) {
         case "+":
             return sum(a, b);
@@ -101,11 +103,7 @@ window.addEventListener('load', function () {
                     operator = '';
                 } else {
                     //equal-button pressed
-                    var a;
-                    var b;
-                    a = parseFloat(output);
-                    b = parseFloat(input);
-                    input = calculate(a, b, operator);
+                    input = calculate(output, input, operator);
                     output = '';
                     operator = '';
                 }
