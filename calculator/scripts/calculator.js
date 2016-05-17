@@ -75,13 +75,11 @@ window.addEventListener('load', function () {
 
             //number pressed
             if (evnt.target.attributes.getNamedItem('class').nodeValue === 'number') {
-                console.log('pressed number');
                 input += evnt.target.attributes.getNamedItem('value').nodeValue;
             }
 
             //operator pressed
             if (evnt.target.attributes.getNamedItem('class').nodeValue === 'operator') {
-                console.log('pressed operator');
                 var operatorid = evnt.target.attributes.getNamedItem('id').nodeValue;
                 operator = document.getElementById(operatorid).innerHTML;
                 if (output === '') {
@@ -92,7 +90,6 @@ window.addEventListener('load', function () {
 
             //command pressed
             if (evnt.target.attributes.getNamedItem('class').nodeValue === 'command') {
-                console.log('pressed command');
                 var commandid = evnt.target.attributes.getNamedItem('id').nodeValue;
                 var command = document.getElementById(commandid).innerHTML;
 
