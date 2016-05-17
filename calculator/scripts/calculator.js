@@ -36,6 +36,8 @@ function quotient(a, b) {
 
 //handles the symbols for calculations
 function calculate(a, b, operation) {
+    a = parseFloat(a);
+    b = parseFloat(b);
     switch (operation) {
         case "+":
             return sum(a, b);
@@ -73,13 +75,11 @@ window.addEventListener('load', function () {
 
             //number pressed
             if (evnt.target.attributes.getNamedItem('class').nodeValue === 'number') {
-                console.log('pressed number');
                 input += evnt.target.attributes.getNamedItem('value').nodeValue;
             }
 
             //operator pressed
             if (evnt.target.attributes.getNamedItem('class').nodeValue === 'operator') {
-                console.log('pressed operator');
                 var operatorid = evnt.target.attributes.getNamedItem('id').nodeValue;
                 operator = document.getElementById(operatorid).innerHTML;
                 if (output === '') {
@@ -90,7 +90,6 @@ window.addEventListener('load', function () {
 
             //command pressed
             if (evnt.target.attributes.getNamedItem('class').nodeValue === 'command') {
-                console.log('pressed command');
                 var commandid = evnt.target.attributes.getNamedItem('id').nodeValue;
                 var command = document.getElementById(commandid).innerHTML;
 
@@ -101,11 +100,7 @@ window.addEventListener('load', function () {
                     operator = '';
                 } else {
                     //equal-button pressed
-                    var a;
-                    var b;
-                    a = parseFloat(output);
-                    b = parseFloat(input);
-                    input = calculate(a, b, operator);
+                    input = calculate(output, input, operator);
                     output = '';
                     operator = '';
                 }
