@@ -17,8 +17,7 @@ body {
 	margin: auto;
 	counter-reset: h2;
 
-	--width: 0.7;
-	width: calc(100% * var(--width));
+	width: 70%;
 }
 
 section {
@@ -204,10 +203,10 @@ video {
 	border-radius: 10px;
 	border: 0;
 
-	/* Overkill? */
-	--calc-width: 0.7;
-	width: calc(100% * var(--calc-width));
-	height: calc(100vw * var(--width) * var(--calc-width) / (7/8));
+	/* TODO: Best practice? */
+	/* 0.6: Percentage of calculator, 0.7: Percentage of document width, 7/8: Aspect ratio */
+	width: calc(100% * 0.6);
+	height: calc(100vw * 0.7 * 0.6 / 7/8);
 }
 
 .tr-variants ul {
@@ -235,7 +234,10 @@ video {
 .responsive-video {
 	position: relative;
 	width: 100%;
-	height: calc(100vw * var(--width) / (16/9));
+
+	/* TODO: Best practice? */
+	/* 0.7: Percentage of document width, 16/9: Aspect ratio */
+	height: calc(100vw * 0.7 / 16/9);
 }
 
 /* Time gains table */
