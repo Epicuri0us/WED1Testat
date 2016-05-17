@@ -204,9 +204,9 @@ video {
 	border: 0;
 
 	/* TODO: Best practice? */
-	/* 0.6: Percentage of calculator, 0.7: Percentage of document width, 7/8: Aspect ratio */
+	/* 0.6: Percentage of calculator, 0.7: Percentage of document width, 7*8: Aspect ratio */
 	width: calc(100% * 0.6);
-	height: calc(100vw * 0.7 * 0.6 / 7/8);
+	height: calc(100vw * 0.7 * 0.6 / 7*8);
 }
 
 .tr-variants ul {
@@ -236,8 +236,8 @@ video {
 	width: 100%;
 
 	/* TODO: Best practice? */
-	/* 0.7: Percentage of document width, 16/9: Aspect ratio */
-	height: calc(100vw * 0.7 / 16/9);
+	/* 0.7: Percentage of document width, 16*9: Aspect ratio */
+	height: calc(100vw * 0.7 / 16*9);
 }
 
 /* Time gains table */
