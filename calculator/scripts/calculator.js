@@ -60,14 +60,14 @@ function calculate(a, b, operation) {
 //check the Welcome-HTML
 function checkWelcome() {
     'use strict';
-    if (document.getElementById('output').innerHTML === "Welcome") {
-        document.getElementById('output').innerHTML = "";
+    if (document.getElementById('output').innerHTML === 'Welcome') {
+        document.getElementById('output').innerHTML = '';
     }
 }
 
 window.addEventListener('load', function () {
     'use strict';
-    document.getElementById('output').innerHTML = "Welcome";
+    document.getElementById('output').innerHTML = 'Welcome';
     //for calculations
     var input = '';
     var output = '';
@@ -101,7 +101,7 @@ window.addEventListener('load', function () {
                 var command = document.getElementById(commandid).innerHTML;
 
                 //C-button pressed
-                if (command === "C") {
+                if (command === 'C') {
                     input = '';
                     output = '';
                     operator = '';
