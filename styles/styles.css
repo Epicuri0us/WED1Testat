@@ -204,28 +204,21 @@ video {
 	border: 0;
 
 	/* TODO: Best practice? */
-	/* 0.6: Percentage of calculator, 0.7: Percentage of document width, 7*8: Aspect ratio */
+	/* 0.6: Percentage of calculator width, 0.7: Percentage of document width, 7*8: Aspect ratio */
 	width: calc(100% * 0.6);
 	height: calc(100vw * 0.7 * 0.6 / 7*8);
 }
 
-.tr-variants ul {
-	list-style-type: none;
-}
-
-.tr-variants ul li {
+.tr-variants dt {
 	color: #0060a0;
 }
 
-.tr-variants ul ul {
-	margin-left: 1rem;
-}
-
-.tr-variants ul ul li {
+.tr-variants dd {
+	margin-left: 0.6rem;
 	color: #000;
 }
 
-.tr-variants ul ul li:before {
+.tr-variants dd:before {
 	content: "⌖ ";
 }
 
