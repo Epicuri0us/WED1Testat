@@ -232,7 +232,6 @@ video {
 /* Embedded video */
 
 .responsive-video {
-	position: relative;
 	width: 100%;
 
 	/* TODO: Best practice? */
