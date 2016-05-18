@@ -211,6 +211,7 @@ video {
 
 .tr-variants dt {
 	color: #0060a0;
+	font-weight: bold;
 }
 
 .tr-variants dd {
